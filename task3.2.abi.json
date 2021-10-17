@@ -1,0 +1,102 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["time", "expire"],
+	"functions": [
+		{
+			"name": "addTask",
+			"inputs": [
+				{"name":"_name","type":"string"},
+				{"name":"done","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getTask",
+			"inputs": [
+				{"name":"key","type":"int8"}
+			],
+			"outputs": [
+				{"name":"name","type":"string"},
+				{"name":"time","type":"uint32"},
+				{"name":"done","type":"bool"}
+			]
+		},
+		{
+			"name": "numbTasks",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"int8"}
+			]
+		},
+		{
+			"name": "getList",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"value0","type":"string"}
+			]
+		},
+		{
+			"name": "isDone",
+			"inputs": [
+				{"name":"key","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "remove",
+			"inputs": [
+				{"name":"key","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "newTask",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint32"},{"name":"done","type":"bool"}],"name":"newTask","type":"map(int8,tuple)"}
+			]
+		},
+		{
+			"name": "task_index",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"task_index","type":"int8"}
+			]
+		},
+		{
+			"name": "numberOpenTask",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"numberOpenTask","type":"int8"}
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"components":[{"name":"name","type":"string"},{"name":"time","type":"uint32"},{"name":"done","type":"bool"}],"name":"newTask","type":"map(int8,tuple)"},
+		{"name":"task_index","type":"int8"},
+		{"name":"numberOpenTask","type":"int8"}
+	]
+}
